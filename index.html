@@ -3,70 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG Negocios Inmobiliarios - Tu próximo hogar</title>
+    <title>Negocios Inmobiliarios</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="00.png.JPG" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <img src="00.png.JPG" alt="Logo de Galvan Dora Negocios Inmobiliarios" width="250">
-        <h1>Encuentra el hogar de tus sueños</h1>
-        <p>Propiedades exclusivas en Buenos Aires, Mendoza y Córdoba</p>
-    </header>
-    
-    <section class="hero">
-        <img src="images/casa2.jpg" alt="Vista de un departamento moderno">
-        <h2>Descubre tu próxima inversión inmobiliaria</h2>
-        <p>Accede a nuestra selección de propiedades premium con asesoramiento personalizado.</p>
-        <a href="#formulario" class="cta-button">Solicita más información</a>
-    </section>
-    
-    <section class="benefits">
-        <h2>¿Por qué elegirnos?</h2>
-        <ul>
-            <li>✔️ Propiedades verificadas y listas para escriturar</li>
-            <li>✔️ Asesoramiento personalizado en cada paso</li>
-            <li>✔️ Oportunidades de inversión exclusivas</li>
-            <li>✔️ Acceso a créditos y financiamiento</li>
-        </ul>
-    </section>
-
-    <section class="gallery">
-        <h2>Nuestras Propiedades Destacadas</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="images/casa1.jpg" alt="Propiedad moderna">
-            </div>
-            <div class="gallery-item">
-                <img src="images/casa1a.jpg" alt="Apartamento de lujo">
-            </div>
-            <div class="gallery-item">
-                <img src="images/casa1b.jpg" alt="Casa familiar">
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-text">
+                <img src="00.png.JPG" alt="Logotipo" class="logo">
             </div>
         </div>
+        <nav>
+            <ul>
+                <li><a href="comprar.html">COMPRAR</a></li>
+                <li><a href="vender.html">VENDER</a></li>
+                <li><a href="#alquilar">ALQUILER</a></li>
+                <li><a href="alertas.html">CREAR ALERTA</a></li>
+                <li><a href="redes.html">REDES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-section">
+        <div class="search-bar">
+            <button id="comprar-tab" onclick="location.href='comprar.html'">Comprar</button>
+            <button id="alquilar-tab" onclick="location.href='alquilar.html'">Alquilar</button>
+            <input type="text" placeholder="¿Dónde querés mudarte?">
+            <select>
+                <option value="departamento">Departamento</option>
+                <option value="ph">PH</option>
+                <option value="casa">Casa</option>
+                <option value="terreno">Terrenos y lotes</option>
+                <option value="cochera">Cocheras</option>
+            </select>
+            <button class="search-btn">Buscar</button>
+        </div>
     </section>
-    
-    <section id="formulario" class="contact-form">
-        <h2>Déjanos tus datos y te contactaremos</h2>
-        <form action="#" method="POST">
-            <label for="name">Nombre y Apellido:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="message">¿Qué tipo de propiedad buscas?</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            
+
+    <section class="properties">
+        <div class="property-card">
+            <img src="fd.png.jpg" alt="Propiedad 1">
+            <p>Casa en Venta en San Miguel De Tucumán</p>
+            <p>84.30 m² | 2 habitaciones</p>
+            <p><strong>Consulte el precio</strong></p>
+        </div>
+        <div class="property-card">
+            <img src="img2.jpg" alt="Propiedad 2">
+            <p>Casa en Alquiler en San Miguel De Tucumán</p>
+            <p>83 m² | 2 habitaciones</p>
+            <p><strong>$ 42.000</strong></p>
+        </div>
+        <div class="property-card">
+            <img src="img3.jpg" alt="Propiedad 3">
+            <p>Departamento en Venta en San Miguel</p>
+            <p>74.68 m² | 3 habitaciones</p>
+            <p><strong>$ 64.000</strong></p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contacto</h2>
+        <form action="procesar.php" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </section>
-    
-    <footer>
-        <p>© 2025 DG Negocios Inmobiliarios. Todos los derechos reservados.</p>
-        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
-    </footer>
 </body>
+<footer class="textcenter">
+    <h4>copyright 2022</h4>
+</footer>
 </html>
